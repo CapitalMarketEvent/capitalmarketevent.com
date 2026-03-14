@@ -19,9 +19,11 @@ from typing import Optional
 from datetime import datetime
 
 
-# Configuration - These need to be set from your Zazzle account
-ZAZZLE_MEMBER_ID = "YOUR_MEMBER_ID"  # 18-digit number from your account
-ZAZZLE_ASSOCIATE_ID = "YOUR_ASSOCIATE_ID"  # For tracking referrals
+# Configuration - Set these as environment variables!
+# DO NOT hardcode values here - use os.getenv()
+# Example: export ZAZZLE_MEMBER_ID='123456789012345678'
+ZAZZLE_MEMBER_ID = os.getenv("ZAZZLE_MEMBER_ID", "")
+ZAZZLE_ASSOCIATE_ID = os.getenv("ZAZZLE_ASSOCIATE_ID", "")
 
 
 def url_encode(text: str) -> str:
@@ -203,17 +205,27 @@ class ZazzleAPI:
         return url
 
 
-def generate_milestone_hat_link(milestone: str, design_url: str) -> str:
-    """Generate a product link for a market milestone hat."""
+def generate_milestone_hat_link(milestone: str, design_url: str, template_id: str) -> str:
+    """Generate a product link for a market milestone hat.
     
-    # Template ID for a baseball cap (example - you'd create your own)
-    # This is where you'd put your custom template ID once created
-    CAP_TEMPLATE_ID = "YOUR_CAP_TEMPLATE_ID"
+    Args:
+        milestone: The market milestone text (e.g., "Dow 20K")
+        design_url: URL of the design image
+        template_id: Your Zazzle template ID (required - no default)
+    
+    Returns:
+        Product URL or error message if not configured
+    """
+    if not ZAZZLE_MEMBER_ID:
+        return "Error: ZAZZLE_MEMBER_ID not set. Use environment variable."
+    
+    if not template_id:
+        return "Error: template_id required. Create a hat template in Zazzle first."
     
     api = ZazzleAPI(ZAZZLE_MEMBER_ID, ZAZZLE_ASSOCIATE_ID)
     
     return api.create_product_link(
-        template_id=CAP_TEMPLATE_ID,
+        template_id=template_id,
         image_url=design_url,
         text=milestone,
         text_color="000000",
