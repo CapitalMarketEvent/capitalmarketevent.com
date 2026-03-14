@@ -28,7 +28,20 @@ _site/
 
 # Claude AI workspace files
 .claude/
-_claude_notes/
+
+# Legacy Windopener notes (not relevant to this project)
+_claude_notes/Application-Polish*
+_claude_notes/CALL_and_LAUNCH*
+_claude_notes/Claude_checklist*
+_claude_notes/offline_claude*
+_claude_notes/QUICK_REFERENCE*
+_claude_notes/_claude_outputs/
+_claude_notes/claude_tools/
+_claude_notes/extracted_code/
+
+# Keep these notes files
+# _claude_notes/Claude_notes.md - KEEP
+# _claude_notes/work_log.md - KEEP
 
 # Generated files (these are local-only)
 automation/generated_designs/
