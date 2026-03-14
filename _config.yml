@@ -1,0 +1,17 @@
+# GitHub Pages Configuration
+title: Capital Market Event
+description: Celebrating Wall Street's silly tradition with hats for every milestone
+url: https://capitalmarketevent.com
+
+# GitHub Pages settings
+theme: null
+future: true
+
+# Build settings
+timezone: America/New_York
+
+# Exclude automation scripts from the build
+exclude:
+  - "automation/"
+  - "*.py"
+  - "requirements.txt"

@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated files (keep these in git for tracking)
+# automation/generated_designs/
+
+# Environment
+.env
+.env.local
+
+# Build outputs
+_site/
+.jekyll-cache/
