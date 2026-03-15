@@ -26,6 +26,15 @@
     </header>
 
     <main>
+        <!-- Live Market Ticker -->
+        <section class="market-ticker">
+            <div class="container">
+                <div class="ticker-wrapper" id="market-ticker">
+                    <!-- Prices loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
@@ -106,17 +115,17 @@
                     <div class="milestone-card">
                         <div class="milestone-number">20,000</div>
                         <div class="milestone-label">Dow</div>
-                        <div class="milestone-status">TBD</div>
+                        <div class="milestone-status" id="dji-status">--</div>
                     </div>
                     <div class="milestone-card">
                         <div class="milestone-number">6,000</div>
                         <div class="milestone-label">S&P</div>
-                        <div class="milestone-status">Done ✅</div>
+                        <div class="milestone-status" id="gspc-status">--</div>
                     </div>
                     <div class="milestone-card">
                         <div class="milestone-number">20,000</div>
                         <div class="milestone-label">NASDAQ</div>
-                        <div class="milestone-status">TBD</div>
+                        <div class="milestone-status" id="ixic-status">--</div>
                     </div>
                     <div class="milestone-card">
                         <div class="milestone-number">$100T</div>
@@ -153,5 +162,6 @@
     </footer>
 
     <script src="assets/main.js"></script>
+    <script src="assets/prices.js"></script>
 </body>
 </html>

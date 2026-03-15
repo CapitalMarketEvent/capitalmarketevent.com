@@ -44,6 +44,68 @@ body {
     padding: 0 20px;
 }
 
+/* Market Ticker */
+.market-ticker {
+    background: var(--color-bg-secondary);
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: var(--header-height);
+}
+
+.ticker-wrapper {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.ticker-wrapper::-webkit-scrollbar {
+    height: 4px;
+}
+
+.ticker-wrapper::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+    border-radius: 2px;
+}
+
+.ticker-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    padding: 8px 16px;
+    background: var(--color-bg-card);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ticker-symbol {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.ticker-price {
+    font-family: monospace;
+    color: var(--color-text);
+}
+
+.ticker-change {
+    font-family: monospace;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.ticker-change.positive {
+    color: var(--color-green);
+    background: rgba(34, 197, 94, 0.1);
+}
+
+.ticker-change.negative {
+    color: var(--color-red);
+    background: rgba(239, 68, 68, 0.1);
+}
+
 /* Header */
 .header {
     position: fixed;
@@ -103,7 +165,7 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: calc(var(--header-height) + 60px) 0 60px;
+    padding: 60px 0 60px;
     background: 
         radial-gradient(ellipse at top, rgba(0, 212, 170, 0.1) 0%, transparent 50%),
         linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-secondary) 100%);
@@ -353,6 +415,40 @@ body {
     text-align: center;
 }
 
+/* Coming Soon */
+.coming-soon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+}
+
+.coming-soon-content {
+    text-align: center;
+    background: var(--color-bg-card);
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 60px 40px;
+    max-width: 400px;
+}
+
+.coming-soon-icon {
+    font-size: 64px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.coming-soon-content h3 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.coming-soon-content p {
+    color: var(--color-text-muted);
+}
+
 /* Milestones Section */
 .milestones-section {
     padding: 80px 0;
@@ -405,10 +501,6 @@ body {
     font-size: 14px;
     color: var(--color-green);
     font-weight: 600;
-}
-
-.milestone-status:has(🎉) {
-    color: var(--color-green);
 }
 
 /* Footer */
