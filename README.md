@@ -1,6 +1,6 @@
 # Capital Market Event
 
-🎩 Celebrating Wall Street's silliest tradition - when the market hits milestones, we wear ridiculous hats.
+🎩 Merch for every market milestone.
 
 ## Quick Links
 
