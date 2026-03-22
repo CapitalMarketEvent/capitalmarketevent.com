@@ -1,3 +1,74 @@
 {
-  "products": []
+  "products": [
+    {
+      "id": "256340459126652769",
+      "name": "Bitcoin 100,000",
+      "type": "hat",
+      "description": "Embroidered baseball cap. BTC hit six figures.",
+      "price": "$32.80",
+      "url": "https://www.zazzle.com/bitcoin_100000_embroidered_baseball_cap-256340459126652769",
+      "image_url": "https://rlv.zcache.com/bitcoin_100000_embroidered_baseball_cap-r2b4e4951024b4791a49ecd0fdafb2bfd_65f3k_8byvr_630.jpg",
+      "emoji": "🎩"
+    },
+    {
+      "id": "233041076981976923",
+      "name": "Dow 100,000",
+      "type": "hat",
+      "description": "Embroidered baseball cap. When the Dow hits six figures.",
+      "price": "$32.80",
+      "url": "https://www.zazzle.com/dow_100_000_hat-233041076981976923",
+      "image_url": "https://rlv.zcache.com/dow_100_000_hat-r1148a30b6a914ed18cb077dfafaad27c_65f3k_8byvr_630.jpg",
+      "emoji": "🎩"
+    },
+    {
+      "id": "256056405217759164",
+      "name": "SPY 1,000",
+      "type": "hat",
+      "description": "Embroidered baseball cap. S&P ETF at four digits.",
+      "price": "$32.80",
+      "url": "https://www.zazzle.com/spy_1000_hat-256056405217759164",
+      "image_url": "https://rlv.zcache.com/spy_1000_hat-r63d0bfac378d4e6394d71900bad8931b_65f3e_8byvr_630.jpg",
+      "emoji": "🎩"
+    },
+    {
+      "id": "256629601450699487",
+      "name": "Bitcoin $1,000,000",
+      "type": "hat",
+      "description": "Embroidered baseball cap. For when BTC gets there.",
+      "price": "$32.80",
+      "url": "https://www.zazzle.com/bitcoin_1_000_000_hat-256629601450699487",
+      "image_url": "https://rlv.zcache.com/bitcoin_1_000_000_hat-rb859cb1063a8415c9964738b5c4c250d_65f3k_8byvr_630.jpg",
+      "emoji": "🎩"
+    },
+    {
+      "id": "256647780634693734",
+      "name": "Embroidered Hat",
+      "type": "hat",
+      "description": "The standard issue.",
+      "price": "$32.80",
+      "url": "https://www.zazzle.com/embroidered_hat-256647780634693734",
+      "image_url": "https://rlv.zcache.com/embroidered_hat-r0d253e7d1f7845bab111ebbeec11ef59_65f3k_8byvr_630.jpg",
+      "emoji": "🎩"
+    },
+    {
+      "id": "256932860170524031",
+      "name": "Bitcoin $1,000,000 Hoodie",
+      "type": "apparel",
+      "description": "For when you need a hoodie and a hat.",
+      "price": "$53.20",
+      "url": "https://www.zazzle.com/1_000_000_bitcoin_hoodie-256932860170524031",
+      "image_url": "https://rlv.zcache.com/1_000_000_bitcoin_hoodie-re0d37f1673124f8e89f359fbbfe559f2_k4p00_8byvr_630.jpg",
+      "emoji": "👕"
+    },
+    {
+      "id": "256558238198720581",
+      "name": "Embroidered Hat Tote Bag",
+      "type": "bag",
+      "description": "Carry your gains in something.",
+      "price": "$31.88",
+      "url": "https://www.zazzle.com/embroidered_hat_tote_bag-256558238198720581",
+      "image_url": "https://rlv.zcache.com/embroidered_hat_tote_bag-r02dd828e15dd4d5d9b951e28cc9c0b7f_65fo1_8byvr_630.jpg",
+      "emoji": "👜"
+    }
+  ]
 }

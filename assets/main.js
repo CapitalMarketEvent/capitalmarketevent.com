@@ -85,15 +85,22 @@ function createProductCard(product) {
     
     const imageEmoji = product.emoji || '🎩';
     
+    const imageHTML = product.image_url
+        ? `<img src="${product.image_url}" alt="${product.name}" loading="lazy">`
+        : `<span>${imageEmoji}</span>`;
+
     card.innerHTML = `
         <div class="product-image">
             <div class="placeholder-product">
-                <span>${imageEmoji}</span>
+                ${imageHTML}
             </div>
         </div>
         <h3>${product.name}</h3>
         <p class="product-desc">${product.description}</p>
-        <a href="${product.url}" class="btn btn-small" target="_blank" rel="noopener">Shop Now</a>
+        <div class="product-footer">
+            <span class="product-price">${product.price || ''}</span>
+            <a href="${product.url}" class="btn btn-small" target="_blank" rel="noopener">Shop →</a>
+        </div>
     `;
     
     return card;

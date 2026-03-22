@@ -1,169 +1,229 @@
 /**
- * Capital Market Event - Live Price Feed
- * Fetches real-time market data and displays it
+ * Capital Market Event - Market Data
+ * Prices via Yahoo Finance (CORS proxy), trending via StockTwits + Tradestie
  */
 
-const MARKET_CONFIG = {
-    symbols: [
-        { symbol: 'DJI', name: 'Dow', yahoo: '^DJI' },
-        { symbol: '^GSPC', name: 'S&P', yahoo: '^GSPC' },
-        { symbol: '^IXIC', name: 'NASDAQ', yahoo: '^IXIC' },
-        { symbol: 'BTC', name: 'Bitcoin', yahoo: 'BTC-USD' },
-        { symbol: 'ETH', name: 'Ethereum', yahoo: 'ETH-USD' },
-    ],
-    updateInterval: 60000, // 60 seconds
-    cacheTime: 30000, // 30 seconds cache
+const CORS_PROXY = 'https://corsproxy.io/?';
+
+const MARKET_SYMBOLS = [
+    { symbol: '^DJI',    name: 'DOW',    id: 'dow',    decimals: 0 },
+    { symbol: '^GSPC',   name: 'S&P',    id: 'sp',     decimals: 0 },
+    { symbol: '^IXIC',   name: 'NASDAQ', id: 'nasdaq', decimals: 0 },
+    { symbol: 'BTC-USD', name: 'BTC',    id: 'btc',    decimals: 0 },
+    { symbol: 'ETH-USD', name: 'ETH',    id: 'eth',    decimals: 0 },
+];
+
+const MILESTONES = {
+    '^DJI':    { elementId: 'dji-status',  targets: [45000, 50000, 60000, 100000] },
+    '^GSPC':   { elementId: 'gspc-status', targets: [6000, 7000, 8000] },
+    '^IXIC':   { elementId: 'ixic-status', targets: [20000, 25000] },
 };
 
-// Price cache
 let priceCache = {};
-let lastFetch = 0;
 
-// Format number with commas
-function formatNumber(num, decimals = 2) {
-    if (num === null || num === undefined) return '--';
+// ─── Helpers ─────────────────────────────────────────────────────────────────
+
+function fmt(num, decimals = 0) {
+    if (num == null) return '--';
     return num.toLocaleString('en-US', {
         minimumFractionDigits: decimals,
-        maximumFractionDigits: decimals
+        maximumFractionDigits: decimals,
     });
 }
 
-// Format large numbers (market cap)
-function formatLargeNumber(num) {
-    if (num >= 1e12) return '$' + (num / 1e12).toFixed(1) + 'T';
-    if (num >= 1e9) return '$' + (num / 1e9).toFixed(1) + 'B';
-    return formatNumber(num);
+function changeClass(val) {
+    return val >= 0 ? 'positive' : 'negative';
 }
 
-// Fetch price from Yahoo Finance
-async function fetchPrice(symbol, yahooSymbol) {
-    const cacheKey = symbol;
-    const now = Date.now();
-    
-    // Check cache
-    if (priceCache[cacheKey] && (now - lastFetch) < MARKET_CONFIG.cacheTime) {
-        return priceCache[cacheKey];
-    }
-    
+function changeSign(val) {
+    return val >= 0 ? '+' : '';
+}
+
+// ─── Yahoo Finance fetch (via CORS proxy) ────────────────────────────────────
+
+async function fetchYahoo(yahooSymbol) {
+    const target = `https://query1.finance.yahoo.com/v8/finance/chart/${yahooSymbol}?interval=1d&range=2d`;
     try {
-        const response = await fetch(
-            `https://query1.finance.yahoo.com/v8/finance/chart/${yahooSymbol}?interval=1d&range=1d`
-        );
-        
-        if (!response.ok) throw new Error('Fetch failed');
-        
-        const data = await response.json();
-        const result = data.chart?.result?.[0];
-        
-        if (!result) throw new Error('No data');
-        
-        const meta = result.meta;
-        const quote = result.indicators?.quote?.[0];
-        
-        const price = meta.regularMarketPrice || quote?.close?.[quote.close.length - 1];
-        const prevClose = meta.previousClose || quote?.close?.[0];
-        const change = price - prevClose;
-        const changePercent = prevClose ? (change / prevClose) * 100 : 0;
-        
-        const priceData = {
-            price,
-            change,
-            changePercent,
-            marketState: meta.marketState || 'CLOSED',
-            timestamp: now
-        };
-        
-        priceCache[cacheKey] = priceData;
-        lastFetch = now;
-        
-        return priceData;
-        
-    } catch (error) {
-        console.error(`Error fetching ${symbol}:`, error);
-        return priceCache[cacheKey] || null;
+        const res = await fetch(CORS_PROXY + target);
+        if (!res.ok) throw new Error(res.status);
+        const data = await res.json();
+        const meta = data.chart?.result?.[0]?.meta;
+        if (!meta) throw new Error('no meta');
+
+        const price = meta.regularMarketPrice;
+        const prev  = meta.previousClose || meta.chartPreviousClose;
+        const change = price - prev;
+        const changePct = prev ? (change / prev) * 100 : 0;
+
+        return { price, change, changePct, state: meta.marketState };
+    } catch (e) {
+        console.warn('Price fetch failed for', yahooSymbol, e.message);
+        return null;
     }
 }
 
-// Render ticker item
-function createTickerItem(symbol, name, priceData) {
-    if (!priceData) {
+// ─── Render market ticker bar ─────────────────────────────────────────────────
+
+function renderTickerBar(items) {
+    const el = document.getElementById('market-ticker');
+    if (!el) return;
+    el.innerHTML = items.map(({ name, data }) => {
+        if (!data) return `<div class="ticker-item"><span class="ticker-symbol">${name}</span><span class="ticker-price">--</span></div>`;
         return `<div class="ticker-item">
             <span class="ticker-symbol">${name}</span>
-            <span class="ticker-price">--</span>
+            <span class="ticker-price">${name === 'BTC' || name === 'ETH' ? '$' : ''}${fmt(data.price)}</span>
+            <span class="ticker-change ${changeClass(data.change)}">${changeSign(data.change)}${data.changePct.toFixed(2)}%</span>
         </div>`;
-    }
-    
-    const changeClass = priceData.change >= 0 ? 'positive' : 'negative';
-    const changeSign = priceData.change >= 0 ? '+' : '';
-    
-    return `<div class="ticker-item">
-        <span class="ticker-symbol">${name}</span>
-        <span class="ticker-price">$${formatNumber(priceData.price)}</span>
-        <span class="ticker-change ${changeClass}">
-            ${changeSign}${formatNumber(priceData.changePercent)}%
-        </span>
-    </div>`;
+    }).join('');
 }
 
-// Update milestone status
-function updateMilestoneStatus(symbol, elementId, milestones, priceData) {
-    const element = document.getElementById(elementId);
-    if (!element || !priceData) {
-        if (element) element.textContent = '--';
-        return;
+// ─── Render hero market stats ─────────────────────────────────────────────────
+
+function renderHeroStats(items) {
+    const el = document.getElementById('hero-stats');
+    if (!el) return;
+    el.innerHTML = items.map(({ name, id, data }) => {
+        const isCrypto = name === 'BTC' || name === 'ETH';
+        const price = data ? `${isCrypto ? '$' : ''}${fmt(data.price)}` : '--';
+        const pct   = data ? `<span class="stat-change ${changeClass(data.change)}">${changeSign(data.change)}${data.changePct.toFixed(2)}%</span>` : '';
+        return `<div class="hero-stat" id="stat-${id}">
+            <div class="stat-label">${name}</div>
+            <div class="stat-price">${price}</div>
+            ${pct}
+        </div>`;
+    }).join('');
+}
+
+// ─── Milestone progress ───────────────────────────────────────────────────────
+
+function updateMilestones(priceMap) {
+    for (const [symbol, cfg] of Object.entries(MILESTONES)) {
+        const el = document.getElementById(cfg.elementId);
+        if (!el) continue;
+        const data = priceMap[symbol];
+        if (!data) { el.textContent = '--'; continue; }
+
+        const price = data.price;
+        const next = cfg.targets.find(t => t > price);
+        if (!next) { el.textContent = 'ATH territory'; continue; }
+
+        const pct = ((price / next) * 100).toFixed(1);
+        el.textContent = `${fmt(next)} (${pct}% there)`;
     }
-    
-    const price = priceData.price;
-    let status = 'TBD';
-    
-    // Check if milestone hit
-    for (const milestone of milestones) {
-        if (price >= milestone) {
-            status = '✅ Done';
-        } else {
-            // Find next milestone
-            const next = milestones.find(m => m > price);
-            if (next) {
-                const pct = ((price / next) * 100).toFixed(1);
-                status = `${formatNumber(next)} (${pct}%)`;
+}
+
+// ─── StockTwits trending ──────────────────────────────────────────────────────
+
+async function fetchStockTwitsTrending() {
+    try {
+        const res = await fetch('https://api.stocktwits.com/api/2/streams/trending.json');
+        if (!res.ok) throw new Error(res.status);
+        const data = await res.json();
+        // Extract unique symbols from messages
+        const seen = new Set();
+        const symbols = [];
+        for (const msg of (data.messages || [])) {
+            const sym = msg.symbols?.[0]?.symbol;
+            if (sym && !seen.has(sym)) {
+                seen.add(sym);
+                symbols.push({
+                    symbol: sym,
+                    sentiment: msg.entities?.sentiment?.basic || null,
+                });
             }
+            if (symbols.length >= 12) break;
         }
+        return symbols;
+    } catch (e) {
+        console.warn('StockTwits fetch failed:', e.message);
+        return [];
     }
-    
-    element.textContent = status;
 }
 
-// Render all prices
-async function updatePrices() {
-    const tickerEl = document.getElementById('market-ticker');
-    if (!tickerEl) return;
-    
-    let tickerHTML = '';
-    
-    for (const { symbol, name, yahoo } of MARKET_CONFIG.symbols) {
-        const priceData = await fetchPrice(symbol, yahoo);
-        tickerHTML += createTickerItem(symbol, name, priceData);
-        
-        // Update milestone status
-        if (symbol === 'DJI') {
-            updateMilestoneStatus(symbol, 'dji-status', [10000, 15000, 20000], priceData);
-        } else if (symbol === '^GSPC') {
-            updateMilestoneStatus(symbol, 'gspc-status', [3000, 4000, 5000, 6000], priceData);
-        } else if (symbol === '^IXIC') {
-            updateMilestoneStatus(symbol, 'ixic-status', [10000, 15000, 20000], priceData);
-        }
+// ─── WSB trending (Tradestie) ─────────────────────────────────────────────────
+
+async function fetchWSBTrending() {
+    try {
+        const res = await fetch('https://tradestie.com/api/v1/apps/reddit');
+        if (!res.ok) throw new Error(res.status);
+        const data = await res.json();
+        return (data || []).slice(0, 10).map(item => ({
+            symbol: item.ticker,
+            mentions: item.no_of_comments,
+            sentiment: item.sentiment,
+        }));
+    } catch (e) {
+        console.warn('Tradestie fetch failed:', e.message);
+        return [];
     }
-    
-    tickerEl.innerHTML = tickerHTML;
 }
 
-// Initialize
+// ─── Render trending section ──────────────────────────────────────────────────
+
+function renderTrending(stocktwits, wsb) {
+    renderStockTwits(stocktwits);
+    renderWSB(wsb);
+}
+
+function renderStockTwits(items) {
+    const el = document.getElementById('stocktwits-list');
+    if (!el) return;
+    if (!items.length) { el.innerHTML = '<span class="trending-empty">--</span>'; return; }
+    el.innerHTML = items.map(({ symbol, sentiment }) => {
+        const cls = sentiment === 'Bullish' ? 'bull' : sentiment === 'Bearish' ? 'bear' : '';
+        return `<a href="https://stocktwits.com/symbol/${symbol}" class="trending-tag ${cls}" target="_blank" rel="noopener">$${symbol}</a>`;
+    }).join('');
+}
+
+function renderWSB(items) {
+    const el = document.getElementById('wsb-list');
+    if (!el) return;
+    if (!items.length) { el.innerHTML = '<span class="trending-empty">--</span>'; return; }
+    el.innerHTML = items.map(({ symbol, mentions, sentiment }) => {
+        const cls = sentiment === 'Bullish' ? 'bull' : sentiment === 'Bearish' ? 'bear' : '';
+        return `<a href="https://www.reddit.com/r/wallstreetbets/search/?q=${symbol}&sort=new" class="trending-tag ${cls}" target="_blank" rel="noopener">$${symbol}<span class="trending-count">${mentions}</span></a>`;
+    }).join('');
+}
+
+// ─── Main update loop ─────────────────────────────────────────────────────────
+
+async function updateAll() {
+    // Fetch all prices in parallel
+    const results = await Promise.all(
+        MARKET_SYMBOLS.map(async (s) => ({
+            ...s,
+            data: await fetchYahoo(s.symbol),
+        }))
+    );
+
+    // Build lookup map
+    const priceMap = {};
+    results.forEach(r => { priceMap[r.symbol] = r.data; });
+
+    renderTickerBar(results);
+    renderHeroStats(results.filter(r => ['DOW','S&P','NASDAQ','BTC'].includes(r.name)));
+    updateMilestones(priceMap);
+
+    // Cache
+    priceCache = priceMap;
+}
+
+async function updateTrending() {
+    const [stocktwits, wsb] = await Promise.all([
+        fetchStockTwitsTrending(),
+        fetchWSBTrending(),
+    ]);
+    renderTrending(stocktwits, wsb);
+}
+
+// ─── Init ─────────────────────────────────────────────────────────────────────
+
 document.addEventListener('DOMContentLoaded', () => {
-    updatePrices();
-    
-    // Update every interval
-    setInterval(updatePrices, MARKET_CONFIG.updateInterval);
+    updateAll();
+    updateTrending();
+
+    setInterval(updateAll, 60_000);       // prices every 60s
+    setInterval(updateTrending, 300_000); // trending every 5min
 });
 
-// Export for manual refresh
-window.refreshPrices = updatePrices;
+window.refreshPrices = updateAll;

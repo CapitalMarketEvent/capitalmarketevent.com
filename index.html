@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capital Market Event — Hats for Market Milestones</title>
-    <meta name="description" content="Commemorative hats for Dow, S&P, NASDAQ, and Bitcoin milestones. NYSE traders have been doing this since 1999.">
+    <title>Capital Market Event</title>
+    <meta name="description" content="NYSE traders have been doing this since 1999. A hat for every number worth marking.">
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header class="header">
         <div class="container">
             <a href="/" class="logo">
@@ -19,70 +20,112 @@
             </a>
             <nav class="nav">
                 <a href="#shop">Shop</a>
+                <a href="#trending">Trending</a>
                 <a href="#milestones">On Deck</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Live Market Ticker -->
+
+        <!-- Live ticker bar -->
         <section class="market-ticker">
             <div class="container">
                 <div class="ticker-wrapper" id="market-ticker">
-                    <!-- Prices loaded dynamically -->
+                    <div class="ticker-item"><span class="ticker-symbol">DOW</span><span class="ticker-price">--</span></div>
+                    <div class="ticker-item"><span class="ticker-symbol">S&P</span><span class="ticker-price">--</span></div>
+                    <div class="ticker-item"><span class="ticker-symbol">NASDAQ</span><span class="ticker-price">--</span></div>
+                    <div class="ticker-item"><span class="ticker-symbol">BTC</span><span class="ticker-price">--</span></div>
+                    <div class="ticker-item"><span class="ticker-symbol">ETH</span><span class="ticker-price">--</span></div>
                 </div>
             </div>
         </section>
 
+        <!-- Hero -->
         <section class="hero">
             <div class="container">
-                <div class="hero-content">
-                    <div class="hero-badge">NYSE · Dow 10,000 · March 1999</div>
-                    <p class="tagline" id="rotating-tagline"></p>
-                    <div class="hero-buttons">
-                        <a href="#shop" class="btn btn-primary">Shop Hats</a>
-                        <a href="#milestones" class="btn btn-secondary">On Deck</a>
-                    </div>
+                <div class="hero-badge">NYSE · Dow 10,000 · March 1999</div>
+
+                <!-- Live market numbers -->
+                <div class="hero-stats" id="hero-stats">
+                    <div class="hero-stat"><div class="stat-label">DOW</div><div class="stat-price">--</div></div>
+                    <div class="hero-stat"><div class="stat-label">S&P</div><div class="stat-price">--</div></div>
+                    <div class="hero-stat"><div class="stat-label">NASDAQ</div><div class="stat-price">--</div></div>
+                    <div class="hero-stat"><div class="stat-label">BTC</div><div class="stat-price">--</div></div>
+                </div>
+
+                <p class="tagline" id="rotating-tagline"></p>
+
+                <div class="hero-buttons">
+                    <a href="#shop" class="btn btn-primary">Shop Hats</a>
+                    <a href="#milestones" class="btn btn-secondary">On Deck</a>
                 </div>
             </div>
+
+            <!-- Scrolling milestone strip -->
             <div class="hero-strip">
                 <div class="hero-strip-content">
-                    <span>DOW 10K</span><span>S&P 5000</span><span>NASDAQ 20K</span><span>DOW 40K</span><span>BTC 100K</span><span>DOW 30K</span><span>S&P 4000</span><span>NASDAQ 15K</span><span>DOW 20K</span><span>BTC 50K</span>
-                    <span>DOW 10K</span><span>S&P 5000</span><span>NASDAQ 20K</span><span>DOW 40K</span><span>BTC 100K</span><span>DOW 30K</span><span>S&P 4000</span><span>NASDAQ 15K</span><span>DOW 20K</span><span>BTC 50K</span>
+                    <span>DOW 10K</span><span>S&P 5000</span><span>NASDAQ 20K</span><span>DOW 40K</span><span>BTC 100K</span><span>DOW 30K</span><span>S&P 4000</span><span>NASDAQ 15K</span><span>DOW 20K</span><span>BTC 50K</span><span>SPY 1000</span><span>DOW 100K</span>
+                    <span>DOW 10K</span><span>S&P 5000</span><span>NASDAQ 20K</span><span>DOW 40K</span><span>BTC 100K</span><span>DOW 30K</span><span>S&P 4000</span><span>NASDAQ 15K</span><span>DOW 20K</span><span>BTC 50K</span><span>SPY 1000</span><span>DOW 100K</span>
                 </div>
             </div>
         </section>
 
+        <!-- Shop -->
         <section id="shop" class="shop-section">
             <div class="container">
                 <h2>Hats</h2>
                 <p class="section-subtitle">One for each number worth marking.</p>
 
-                <div class="product-grid" id="product-grid">
-                    <!-- Products loaded dynamically from products.json -->
-                </div>
+                <div class="product-grid" id="product-grid"></div>
 
-                <div class="coming-soon" id="coming-soon" style="display: none;">
+                <div class="coming-soon" id="coming-soon" style="display:none;">
                     <div class="coming-soon-content">
                         <span class="coming-soon-icon">🎩</span>
                         <h3>In Production</h3>
-                        <p>The next milestone hat is on its way. Check back.</p>
+                        <p>The next milestone hat is on its way.</p>
                     </div>
                 </div>
 
                 <div class="shop-cta">
                     <a href="https://www.zazzle.com/store/capital_market_event" class="btn btn-primary btn-large" target="_blank" rel="noopener">
-                        Full Collection on Zazzle →
+                        Full Store on Zazzle →
                     </a>
                 </div>
             </div>
         </section>
 
+        <!-- Trending -->
+        <section id="trending" class="trending-section">
+            <div class="container">
+                <div class="trending-grid">
+                    <div class="trending-col">
+                        <div class="trending-header">
+                            <span class="trending-source">StockTwits</span>
+                            <span class="trending-label">Trending Now</span>
+                        </div>
+                        <div class="trending-tags" id="stocktwits-list">
+                            <span class="trending-empty">Loading…</span>
+                        </div>
+                    </div>
+                    <div class="trending-col">
+                        <div class="trending-header">
+                            <span class="trending-source">r/WallStreetBets</span>
+                            <span class="trending-label">Most Mentioned</span>
+                        </div>
+                        <div class="trending-tags" id="wsb-list">
+                            <span class="trending-empty">Loading…</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- On Deck -->
         <section id="milestones" class="milestones-section">
             <div class="container">
                 <h2>On Deck</h2>
                 <p class="section-subtitle">The next numbers.</p>
-
                 <div class="milestones-grid">
                     <div class="milestone-card">
                         <div class="milestone-number">45,000</div>
@@ -107,6 +150,7 @@
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
@@ -119,6 +163,7 @@
                 <div class="footer-links">
                     <a href="https://www.zazzle.com/store/capital_market_event" target="_blank" rel="noopener">Zazzle Store</a>
                     <a href="#shop">Shop</a>
+                    <a href="#trending">Trending</a>
                     <a href="#milestones">On Deck</a>
                 </div>
             </div>
