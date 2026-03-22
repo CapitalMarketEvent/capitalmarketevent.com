@@ -3,7 +3,38 @@
  * Loads products dynamically from products.json
  */
 
+// ─── Rotating taglines ────────────────────────────────────────────────────────
+// Add more here anytime. They rotate every 4 seconds.
+const TAGLINES = [
+    "Market up. Hat on.",
+    "For every number that made you check your portfolio twice.",
+    "Because green days deserve something to show for it.",
+    "Every ATH deserves a paper trail.",
+    "Numbers go up. Hats go on.",
+    "For the days the market did something worth bragging about.",
+    "Green candles only.",
+    "To the moon, eventually.",
+];
+
+function startRotatingTagline() {
+    const el = document.getElementById('rotating-tagline');
+    if (!el) return;
+
+    let index = 0;
+    el.textContent = TAGLINES[index];
+
+    setInterval(() => {
+        el.style.opacity = '0';
+        setTimeout(() => {
+            index = (index + 1) % TAGLINES.length;
+            el.textContent = TAGLINES[index];
+            el.style.opacity = '1';
+        }, 400);
+    }, 4000);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    startRotatingTagline();
     loadProducts();
 });
 
