@@ -479,6 +479,163 @@ body {
     font-size: 14px;
 }
 
+/* ─── About Page ────────────────────────────────────────── */
+.about-page-hero {
+    padding: 80px 0 56px;
+    background:
+        radial-gradient(ellipse at top center, rgba(0,212,170,0.06) 0%, transparent 55%),
+        var(--color-bg);
+}
+
+.about-eyebrow {
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 16px;
+}
+
+.about-page-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(28px, 4vw, 48px);
+    color: var(--color-text);
+    line-height: 1.2;
+    max-width: 640px;
+}
+
+.about-body {
+    padding: 64px 0 100px;
+    background: var(--color-bg);
+}
+
+.about-columns {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 80px;
+    align-items: start;
+}
+
+.about-block {
+    margin-bottom: 52px;
+}
+
+.about-block:last-child { margin-bottom: 0; }
+
+.about-block h2 {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 16px;
+}
+
+.about-block p {
+    font-size: 15px;
+    color: var(--color-text-muted);
+    line-height: 1.75;
+    margin-bottom: 14px;
+}
+
+.about-block p:last-child { margin-bottom: 0; }
+
+.about-block a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.about-block a:hover { text-decoration: underline; }
+
+.about-stat-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: sticky;
+    top: calc(var(--header-height) + 24px);
+}
+
+.about-stat-card {
+    background: var(--color-bg-card);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 28px 24px;
+}
+
+.asc-number {
+    font-family: var(--font-heading);
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--color-gold);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.asc-label {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .about-columns {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    .about-stat-col {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .about-stat-card { flex: 1; min-width: 200px; }
+}
+
+/* ─── Value Props Bar ───────────────────────────────────── */
+.props-section {
+    background: var(--color-bg);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 28px 0;
+}
+
+.props-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.prop {
+    background: var(--color-bg);
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.prop-label {
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+}
+
+.prop-value {
+    font-size: 14px;
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .props-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+    .props-grid { grid-template-columns: 1fr; }
+}
+
 /* ─── Trending Section ──────────────────────────────────── */
 .trending-section {
     padding: 60px 0;

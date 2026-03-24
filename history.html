@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milestone History — Capital Market Event</title>
+    <meta name="description" content="The first time the Dow crossed 1,000. 10,000. 40,000. A complete record of every round-number milestone in market history.">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/history.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="/" class="logo">
+                <span class="logo-icon">🎩</span>
+                <span class="logo-text">Capital Market Event</span>
+            </a>
+            <nav class="nav">
+                <a href="/#shop">Shop</a>
+                <a href="/history.html" style="color: var(--color-accent)">History</a>
+                <a href="/#milestones">On Deck</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="history-main">
+
+        <section class="history-hero">
+            <div class="container">
+                <p class="history-eyebrow">Market Milestone History</p>
+                <h1>The first time the number changed.</h1>
+                <p class="history-sub">Every round-number crossing for the Dow, S&P 500, NASDAQ, Bitcoin, and major ETFs — pulled from the actual historical record.</p>
+            </div>
+        </section>
+
+        <!-- Index selector tabs -->
+        <section class="history-nav-section">
+            <div class="container">
+                <div class="history-tabs" id="history-tabs">
+                    <!-- populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="history-content">
+            <div class="container">
+                <div id="history-loading" class="history-loading">
+                    <span>Loading historical data…</span>
+                </div>
+                <div id="history-table-wrap" style="display:none;">
+                    <table class="history-table" id="history-table">
+                        <thead>
+                            <tr>
+                                <th>Milestone</th>
+                                <th>First Crossed</th>
+                                <th>Closing Price</th>
+                                <th>Context</th>
+                            </tr>
+                        </thead>
+                        <tbody id="history-tbody"></tbody>
+                    </table>
+                </div>
+                <p id="history-empty" class="history-empty" style="display:none;">
+                    No data yet for this index. Run <code>python automation/historical_scanner.py</code> to generate it.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🎩</span>
+                    <span class="footer-brand-name">Capital Market Event</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.zazzle.com/store/capital_market_event" target="_blank" rel="noopener">Store</a>
+                    <a href="/#shop">Shop</a>
+                    <a href="/history.html">History</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Not financial advice. Not affiliated with any exchange. Just hats.</p>
+                <p>&copy; 2025 Capital Market Event.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/history.js"></script>
+</body>
+</html>

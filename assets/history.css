@@ -1,0 +1,191 @@
+/* History page styles */
+
+.history-main {
+    padding-top: var(--header-height);
+}
+
+/* ─── Hero ────────────────────────────────────────────────── */
+.history-hero {
+    padding: 80px 0 60px;
+    background:
+        radial-gradient(ellipse at top center, rgba(0, 212, 170, 0.06) 0%, transparent 60%),
+        var(--color-bg);
+    text-align: center;
+}
+
+.history-eyebrow {
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 20px;
+}
+
+.history-hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 18px;
+    line-height: 1.2;
+}
+
+.history-sub {
+    font-size: 16px;
+    color: var(--color-text-muted);
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ─── Index tabs ──────────────────────────────────────────── */
+.history-nav-section {
+    background: var(--color-bg-secondary);
+    border-top: 1px solid rgba(255,255,255,0.07);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    padding: 0;
+    position: sticky;
+    top: var(--header-height);
+    z-index: 100;
+}
+
+.history-tabs {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.history-tabs::-webkit-scrollbar { display: none; }
+
+.history-tab {
+    padding: 16px 24px;
+    font-family: monospace;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    border: none;
+    background: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.history-tab:hover {
+    color: var(--color-text);
+}
+
+.history-tab.active {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
+}
+
+/* ─── Table ───────────────────────────────────────────────── */
+.history-content {
+    padding: 60px 0 100px;
+    background: var(--color-bg);
+}
+
+.history-loading,
+.history-empty {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-family: monospace;
+    font-size: 14px;
+    padding: 60px 0;
+}
+
+.history-empty code {
+    background: var(--color-bg-card);
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.history-table thead th {
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.history-table tbody tr {
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    transition: background 0.15s ease;
+}
+
+.history-table tbody tr:hover {
+    background: var(--color-bg-secondary);
+}
+
+.history-table tbody tr.milestone-notable {
+    background: rgba(0, 212, 170, 0.03);
+}
+
+.history-table tbody tr.milestone-notable:hover {
+    background: rgba(0, 212, 170, 0.06);
+}
+
+.history-table td {
+    padding: 14px 16px;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.td-level {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-gold);
+    white-space: nowrap;
+}
+
+.td-date {
+    font-family: monospace;
+    font-size: 13px;
+    color: var(--color-text);
+    white-space: nowrap;
+}
+
+.td-price {
+    font-family: monospace;
+    font-size: 13px;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+}
+
+.td-notes {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    max-width: 440px;
+}
+
+/* ─── Responsive ──────────────────────────────────────────── */
+@media (max-width: 640px) {
+    .history-table thead th:nth-child(3),
+    .history-table td:nth-child(3) {
+        display: none;
+    }
+
+    .td-level {
+        font-size: 16px;
+    }
+
+    .history-content {
+        padding: 40px 0 80px;
+    }
+}

@@ -1,0 +1,36 @@
+name: Update Milestone History
+
+on:
+  schedule:
+    # Weekly on Sunday at 06:00 UTC (catches any new crossings from the week)
+    - cron: '0 6 * * 0'
+  workflow_dispatch: # allow manual trigger
+
+jobs:
+  scan-milestones:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install yfinance pandas
+
+      - name: Run historical scanner
+        run: |
+          # Clone the agent repo to get the scanner, or keep a copy here
+          python .github/scripts/run_scanner.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/milestones.json
+          git diff --staged --quiet || git commit -m "chore: update milestone history [skip ci]"
+          git push
