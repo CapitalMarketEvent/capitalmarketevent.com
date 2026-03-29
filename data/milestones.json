@@ -1,0 +1,1037 @@
+{
+  "generated": "2026-03-29T06:58:57.443990+00:00",
+  "series": [
+    {
+      "symbol": "^DJI",
+      "name": "Dow Jones Industrial Average",
+      "currency": "USD",
+      "milestones": [
+        {
+          "level": 100,
+          "first_close": "1992-01-02",
+          "close_price": 3172.4,
+          "notes": "1906 \u2014 Dow first closed above 100. The Industrial Revolution was in full swing."
+        },
+        {
+          "level": 500,
+          "first_close": "1992-01-02",
+          "close_price": 3172.4,
+          "notes": ""
+        },
+        {
+          "level": 1000,
+          "first_close": "1992-01-02",
+          "close_price": 3172.4,
+          "notes": "1972 \u2014 Dow 1,000 on a closing basis (intraday 1966). Nixon era."
+        },
+        {
+          "level": 2000,
+          "first_close": "1992-01-02",
+          "close_price": 3172.4,
+          "notes": "1987 \u2014 Dow 2,000 in January. Black Monday crash followed in October."
+        },
+        {
+          "level": 3000,
+          "first_close": "1992-01-02",
+          "close_price": 3172.4,
+          "notes": "1991 \u2014 Post-Gulf War rally."
+        },
+        {
+          "level": 4000,
+          "first_close": "1995-02-23",
+          "close_price": 4003.33,
+          "notes": ""
+        },
+        {
+          "level": 5000,
+          "first_close": "1995-11-21",
+          "close_price": 5023.55,
+          "notes": "1995 \u2014 The dot-com buildup begins."
+        },
+        {
+          "level": 6000,
+          "first_close": "1996-10-14",
+          "close_price": 6010.0,
+          "notes": ""
+        },
+        {
+          "level": 7000,
+          "first_close": "1997-02-13",
+          "close_price": 7022.44,
+          "notes": ""
+        },
+        {
+          "level": 8000,
+          "first_close": "1997-07-16",
+          "close_price": 8038.9,
+          "notes": ""
+        },
+        {
+          "level": 9000,
+          "first_close": "1998-04-06",
+          "close_price": 9033.23,
+          "notes": ""
+        },
+        {
+          "level": 10000,
+          "first_close": "1999-03-29",
+          "close_price": 10006.78,
+          "notes": "1999 \u2014 Giuliani and Dick Grasso threw caps on the NYSE floor. The hat tradition begins."
+        },
+        {
+          "level": 11000,
+          "first_close": "1999-05-03",
+          "close_price": 11014.69,
+          "notes": ""
+        },
+        {
+          "level": 12000,
+          "first_close": "2006-10-19",
+          "close_price": 12011.73,
+          "notes": ""
+        },
+        {
+          "level": 13000,
+          "first_close": "2007-04-25",
+          "close_price": 13089.89,
+          "notes": ""
+        },
+        {
+          "level": 14000,
+          "first_close": "2007-07-19",
+          "close_price": 14000.41,
+          "notes": ""
+        },
+        {
+          "level": 15000,
+          "first_close": "2013-05-07",
+          "close_price": 15056.2,
+          "notes": ""
+        },
+        {
+          "level": 16000,
+          "first_close": "2013-11-21",
+          "close_price": 16009.99,
+          "notes": ""
+        },
+        {
+          "level": 17000,
+          "first_close": "2014-07-03",
+          "close_price": 17068.26,
+          "notes": ""
+        },
+        {
+          "level": 18000,
+          "first_close": "2014-12-23",
+          "close_price": 18024.17,
+          "notes": ""
+        },
+        {
+          "level": 19000,
+          "first_close": "2016-11-22",
+          "close_price": 19023.87,
+          "notes": ""
+        },
+        {
+          "level": 20000,
+          "first_close": "2017-01-25",
+          "close_price": 20068.51,
+          "notes": "2017 \u2014 Trump's first full week in office."
+        },
+        {
+          "level": 21000,
+          "first_close": "2017-03-01",
+          "close_price": 21115.55,
+          "notes": ""
+        },
+        {
+          "level": 22000,
+          "first_close": "2017-08-02",
+          "close_price": 22016.24,
+          "notes": ""
+        },
+        {
+          "level": 23000,
+          "first_close": "2017-10-18",
+          "close_price": 23157.6,
+          "notes": ""
+        },
+        {
+          "level": 24000,
+          "first_close": "2017-11-30",
+          "close_price": 24272.35,
+          "notes": ""
+        },
+        {
+          "level": 25000,
+          "first_close": "2018-01-04",
+          "close_price": 25075.13,
+          "notes": ""
+        },
+        {
+          "level": 26000,
+          "first_close": "2018-01-17",
+          "close_price": 26115.65,
+          "notes": ""
+        },
+        {
+          "level": 27000,
+          "first_close": "2019-07-11",
+          "close_price": 27088.08,
+          "notes": ""
+        },
+        {
+          "level": 28000,
+          "first_close": "2019-11-15",
+          "close_price": 28004.89,
+          "notes": ""
+        },
+        {
+          "level": 29000,
+          "first_close": "2020-01-15",
+          "close_price": 29030.22,
+          "notes": ""
+        },
+        {
+          "level": 30000,
+          "first_close": "2020-11-24",
+          "close_price": 30046.24,
+          "notes": "2020 \u2014 November, pandemic year. Market shrugged off COVID."
+        },
+        {
+          "level": 31000,
+          "first_close": "2021-01-07",
+          "close_price": 31041.13,
+          "notes": ""
+        },
+        {
+          "level": 32000,
+          "first_close": "2021-03-10",
+          "close_price": 32297.02,
+          "notes": ""
+        },
+        {
+          "level": 33000,
+          "first_close": "2021-03-17",
+          "close_price": 33015.37,
+          "notes": ""
+        },
+        {
+          "level": 34000,
+          "first_close": "2021-04-15",
+          "close_price": 34035.99,
+          "notes": ""
+        },
+        {
+          "level": 35000,
+          "first_close": "2021-07-23",
+          "close_price": 35061.55,
+          "notes": ""
+        },
+        {
+          "level": 36000,
+          "first_close": "2021-11-02",
+          "close_price": 36052.63,
+          "notes": ""
+        },
+        {
+          "level": 37000,
+          "first_close": "2023-12-13",
+          "close_price": 37090.24,
+          "notes": ""
+        },
+        {
+          "level": 38000,
+          "first_close": "2024-01-22",
+          "close_price": 38001.81,
+          "notes": ""
+        },
+        {
+          "level": 39000,
+          "first_close": "2024-02-22",
+          "close_price": 39069.11,
+          "notes": ""
+        },
+        {
+          "level": 40000,
+          "first_close": "2024-05-17",
+          "close_price": 40003.59,
+          "notes": "2024 \u2014 May 16, 2024."
+        },
+        {
+          "level": 41000,
+          "first_close": "2024-07-17",
+          "close_price": 41198.08,
+          "notes": ""
+        },
+        {
+          "level": 42000,
+          "first_close": "2024-09-19",
+          "close_price": 42025.19,
+          "notes": ""
+        },
+        {
+          "level": 43000,
+          "first_close": "2024-10-14",
+          "close_price": 43065.22,
+          "notes": ""
+        },
+        {
+          "level": 44000,
+          "first_close": "2024-11-11",
+          "close_price": 44293.13,
+          "notes": ""
+        },
+        {
+          "level": 45000,
+          "first_close": "2024-12-04",
+          "close_price": 45014.04,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "symbol": "^GSPC",
+      "name": "S&P 500",
+      "currency": "USD",
+      "milestones": [
+        {
+          "level": 100,
+          "first_close": "1968-06-04",
+          "close_price": 100.38,
+          "notes": ""
+        },
+        {
+          "level": 200,
+          "first_close": "1985-11-21",
+          "close_price": 201.41,
+          "notes": ""
+        },
+        {
+          "level": 300,
+          "first_close": "1987-03-23",
+          "close_price": 301.16,
+          "notes": ""
+        },
+        {
+          "level": 400,
+          "first_close": "1991-12-26",
+          "close_price": 404.84,
+          "notes": ""
+        },
+        {
+          "level": 500,
+          "first_close": "1995-03-24",
+          "close_price": 500.97,
+          "notes": ""
+        },
+        {
+          "level": 600,
+          "first_close": "1995-11-17",
+          "close_price": 600.07,
+          "notes": ""
+        },
+        {
+          "level": 700,
+          "first_close": "1996-10-04",
+          "close_price": 701.46,
+          "notes": ""
+        },
+        {
+          "level": 800,
+          "first_close": "1997-02-12",
+          "close_price": 802.77,
+          "notes": ""
+        },
+        {
+          "level": 900,
+          "first_close": "1997-07-02",
+          "close_price": 904.03,
+          "notes": ""
+        },
+        {
+          "level": 1000,
+          "first_close": "1998-02-02",
+          "close_price": 1001.27,
+          "notes": ""
+        },
+        {
+          "level": 1100,
+          "first_close": "1998-03-24",
+          "close_price": 1105.65,
+          "notes": ""
+        },
+        {
+          "level": 1200,
+          "first_close": "1998-12-21",
+          "close_price": 1202.84,
+          "notes": ""
+        },
+        {
+          "level": 1300,
+          "first_close": "1999-03-15",
+          "close_price": 1307.26,
+          "notes": ""
+        },
+        {
+          "level": 1400,
+          "first_close": "1999-07-09",
+          "close_price": 1403.28,
+          "notes": ""
+        },
+        {
+          "level": 1500,
+          "first_close": "2000-03-22",
+          "close_price": 1500.64,
+          "notes": ""
+        },
+        {
+          "level": 1600,
+          "first_close": "2013-05-03",
+          "close_price": 1614.42,
+          "notes": ""
+        },
+        {
+          "level": 1700,
+          "first_close": "2013-08-01",
+          "close_price": 1706.87,
+          "notes": ""
+        },
+        {
+          "level": 1800,
+          "first_close": "2013-11-22",
+          "close_price": 1804.76,
+          "notes": ""
+        },
+        {
+          "level": 1900,
+          "first_close": "2014-05-23",
+          "close_price": 1900.53,
+          "notes": ""
+        },
+        {
+          "level": 2000,
+          "first_close": "2014-08-26",
+          "close_price": 2000.02,
+          "notes": ""
+        },
+        {
+          "level": 2100,
+          "first_close": "2015-02-17",
+          "close_price": 2100.34,
+          "notes": ""
+        },
+        {
+          "level": 2200,
+          "first_close": "2016-11-22",
+          "close_price": 2202.94,
+          "notes": ""
+        },
+        {
+          "level": 2300,
+          "first_close": "2017-02-09",
+          "close_price": 2307.87,
+          "notes": ""
+        },
+        {
+          "level": 2400,
+          "first_close": "2017-05-15",
+          "close_price": 2402.32,
+          "notes": ""
+        },
+        {
+          "level": 2500,
+          "first_close": "2017-09-15",
+          "close_price": 2500.23,
+          "notes": ""
+        },
+        {
+          "level": 2600,
+          "first_close": "2017-11-24",
+          "close_price": 2602.42,
+          "notes": ""
+        },
+        {
+          "level": 2700,
+          "first_close": "2018-01-03",
+          "close_price": 2713.06,
+          "notes": ""
+        },
+        {
+          "level": 2800,
+          "first_close": "2018-01-17",
+          "close_price": 2802.56,
+          "notes": ""
+        },
+        {
+          "level": 2900,
+          "first_close": "2018-08-29",
+          "close_price": 2914.04,
+          "notes": ""
+        },
+        {
+          "level": 3000,
+          "first_close": "2019-07-12",
+          "close_price": 3013.77,
+          "notes": ""
+        },
+        {
+          "level": 3100,
+          "first_close": "2019-11-15",
+          "close_price": 3120.46,
+          "notes": ""
+        },
+        {
+          "level": 3200,
+          "first_close": "2019-12-19",
+          "close_price": 3205.37,
+          "notes": ""
+        },
+        {
+          "level": 3300,
+          "first_close": "2020-01-16",
+          "close_price": 3316.81,
+          "notes": ""
+        },
+        {
+          "level": 3400,
+          "first_close": "2020-08-24",
+          "close_price": 3431.28,
+          "notes": ""
+        },
+        {
+          "level": 3500,
+          "first_close": "2020-08-28",
+          "close_price": 3508.01,
+          "notes": ""
+        },
+        {
+          "level": 3600,
+          "first_close": "2020-11-16",
+          "close_price": 3626.91,
+          "notes": ""
+        },
+        {
+          "level": 3700,
+          "first_close": "2020-12-08",
+          "close_price": 3702.25,
+          "notes": ""
+        },
+        {
+          "level": 3800,
+          "first_close": "2021-01-07",
+          "close_price": 3803.79,
+          "notes": ""
+        },
+        {
+          "level": 3900,
+          "first_close": "2021-02-08",
+          "close_price": 3915.59,
+          "notes": ""
+        },
+        {
+          "level": 4000,
+          "first_close": "2021-04-01",
+          "close_price": 4019.87,
+          "notes": ""
+        },
+        {
+          "level": 4100,
+          "first_close": "2021-04-09",
+          "close_price": 4128.8,
+          "notes": ""
+        },
+        {
+          "level": 4200,
+          "first_close": "2021-04-29",
+          "close_price": 4211.47,
+          "notes": ""
+        },
+        {
+          "level": 4300,
+          "first_close": "2021-07-01",
+          "close_price": 4319.94,
+          "notes": ""
+        },
+        {
+          "level": 4400,
+          "first_close": "2021-07-23",
+          "close_price": 4411.79,
+          "notes": ""
+        },
+        {
+          "level": 4500,
+          "first_close": "2021-08-27",
+          "close_price": 4509.37,
+          "notes": ""
+        },
+        {
+          "level": 4600,
+          "first_close": "2021-10-29",
+          "close_price": 4605.38,
+          "notes": ""
+        },
+        {
+          "level": 4700,
+          "first_close": "2021-11-08",
+          "close_price": 4701.7,
+          "notes": ""
+        },
+        {
+          "level": 4800,
+          "first_close": "2024-01-19",
+          "close_price": 4839.81,
+          "notes": ""
+        },
+        {
+          "level": 4900,
+          "first_close": "2024-01-29",
+          "close_price": 4927.93,
+          "notes": ""
+        },
+        {
+          "level": 5000,
+          "first_close": "2024-02-09",
+          "close_price": 5026.61,
+          "notes": ""
+        },
+        {
+          "level": 5100,
+          "first_close": "2024-03-01",
+          "close_price": 5137.08,
+          "notes": ""
+        },
+        {
+          "level": 5200,
+          "first_close": "2024-03-20",
+          "close_price": 5224.62,
+          "notes": ""
+        },
+        {
+          "level": 5300,
+          "first_close": "2024-05-15",
+          "close_price": 5308.15,
+          "notes": ""
+        },
+        {
+          "level": 5400,
+          "first_close": "2024-06-12",
+          "close_price": 5421.03,
+          "notes": ""
+        },
+        {
+          "level": 5500,
+          "first_close": "2024-07-02",
+          "close_price": 5509.01,
+          "notes": ""
+        },
+        {
+          "level": 5600,
+          "first_close": "2024-07-10",
+          "close_price": 5633.91,
+          "notes": ""
+        },
+        {
+          "level": 5700,
+          "first_close": "2024-09-19",
+          "close_price": 5713.64,
+          "notes": ""
+        },
+        {
+          "level": 5800,
+          "first_close": "2024-10-11",
+          "close_price": 5815.03,
+          "notes": ""
+        },
+        {
+          "level": 5900,
+          "first_close": "2024-11-06",
+          "close_price": 5929.04,
+          "notes": ""
+        },
+        {
+          "level": 6000,
+          "first_close": "2024-11-11",
+          "close_price": 6001.35,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "symbol": "^IXIC",
+      "name": "NASDAQ Composite",
+      "currency": "USD",
+      "milestones": [
+        {
+          "level": 500,
+          "first_close": "1991-04-12",
+          "close_price": 501.62,
+          "notes": ""
+        },
+        {
+          "level": 1000,
+          "first_close": "1995-07-17",
+          "close_price": 1005.89,
+          "notes": ""
+        },
+        {
+          "level": 2000,
+          "first_close": "1998-07-16",
+          "close_price": 2000.56,
+          "notes": ""
+        },
+        {
+          "level": 3000,
+          "first_close": "1999-11-03",
+          "close_price": 3028.51,
+          "notes": ""
+        },
+        {
+          "level": 4000,
+          "first_close": "1999-12-29",
+          "close_price": 4041.46,
+          "notes": ""
+        },
+        {
+          "level": 5000,
+          "first_close": "2000-03-09",
+          "close_price": 5046.86,
+          "notes": ""
+        },
+        {
+          "level": 6000,
+          "first_close": "2017-04-25",
+          "close_price": 6025.49,
+          "notes": ""
+        },
+        {
+          "level": 7000,
+          "first_close": "2018-01-02",
+          "close_price": 7006.9,
+          "notes": ""
+        },
+        {
+          "level": 8000,
+          "first_close": "2018-08-27",
+          "close_price": 8017.9,
+          "notes": ""
+        },
+        {
+          "level": 9000,
+          "first_close": "2019-12-26",
+          "close_price": 9022.39,
+          "notes": ""
+        },
+        {
+          "level": 10000,
+          "first_close": "2020-06-10",
+          "close_price": 10020.35,
+          "notes": ""
+        },
+        {
+          "level": 11000,
+          "first_close": "2020-08-06",
+          "close_price": 11108.07,
+          "notes": ""
+        },
+        {
+          "level": 12000,
+          "first_close": "2020-09-02",
+          "close_price": 12056.44,
+          "notes": ""
+        },
+        {
+          "level": 13000,
+          "first_close": "2021-01-07",
+          "close_price": 13067.48,
+          "notes": ""
+        },
+        {
+          "level": 14000,
+          "first_close": "2021-02-09",
+          "close_price": 14007.7,
+          "notes": ""
+        },
+        {
+          "level": 15000,
+          "first_close": "2021-08-24",
+          "close_price": 15019.8,
+          "notes": ""
+        },
+        {
+          "level": 16000,
+          "first_close": "2021-11-19",
+          "close_price": 16057.44,
+          "notes": ""
+        },
+        {
+          "level": 17000,
+          "first_close": "2024-05-28",
+          "close_price": 17019.88,
+          "notes": ""
+        },
+        {
+          "level": 18000,
+          "first_close": "2024-07-02",
+          "close_price": 18028.76,
+          "notes": ""
+        },
+        {
+          "level": 19000,
+          "first_close": "2024-11-07",
+          "close_price": 19269.46,
+          "notes": ""
+        },
+        {
+          "level": 20000,
+          "first_close": "2024-12-11",
+          "close_price": 20034.89,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "symbol": "BTC-USD",
+      "name": "Bitcoin",
+      "currency": "USD",
+      "milestones": [
+        {
+          "level": 1,
+          "first_close": "2014-09-17",
+          "close_price": 457.33,
+          "notes": "2011 \u2014 Bitcoin hits $1 for the first time."
+        },
+        {
+          "level": 10,
+          "first_close": "2014-09-17",
+          "close_price": 457.33,
+          "notes": ""
+        },
+        {
+          "level": 100,
+          "first_close": "2014-09-17",
+          "close_price": 457.33,
+          "notes": ""
+        },
+        {
+          "level": 1000,
+          "first_close": "2017-01-02",
+          "close_price": 1021.75,
+          "notes": "2013 \u2014 Cyprus banking crisis drove early adoption."
+        },
+        {
+          "level": 5000,
+          "first_close": "2017-10-12",
+          "close_price": 5446.91,
+          "notes": ""
+        },
+        {
+          "level": 10000,
+          "first_close": "2017-11-28",
+          "close_price": 10058.8,
+          "notes": "2017 \u2014 Bitcoin $10K during the first mainstream crypto mania."
+        },
+        {
+          "level": 20000,
+          "first_close": "2020-12-16",
+          "close_price": 21310.6,
+          "notes": "2020 \u2014 December, surpassing the 2017 all-time high."
+        },
+        {
+          "level": 30000,
+          "first_close": "2021-01-02",
+          "close_price": 32127.27,
+          "notes": ""
+        },
+        {
+          "level": 40000,
+          "first_close": "2021-01-08",
+          "close_price": 40797.61,
+          "notes": ""
+        },
+        {
+          "level": 50000,
+          "first_close": "2021-02-17",
+          "close_price": 52149.01,
+          "notes": ""
+        },
+        {
+          "level": 60000,
+          "first_close": "2021-03-13",
+          "close_price": 61243.09,
+          "notes": ""
+        },
+        {
+          "level": 70000,
+          "first_close": "2024-03-11",
+          "close_price": 72123.91,
+          "notes": ""
+        },
+        {
+          "level": 80000,
+          "first_close": "2024-11-10",
+          "close_price": 80474.19,
+          "notes": ""
+        },
+        {
+          "level": 90000,
+          "first_close": "2024-11-13",
+          "close_price": 90584.16,
+          "notes": ""
+        },
+        {
+          "level": 100000,
+          "first_close": "2024-12-08",
+          "close_price": 101236.02,
+          "notes": "2024 \u2014 Six figures. Trump election catalyst."
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "name": "SPDR S&P 500 ETF (SPY)",
+      "currency": "USD",
+      "milestones": [
+        {
+          "level": 100,
+          "first_close": "2007-01-12",
+          "close_price": 100.44,
+          "notes": ""
+        },
+        {
+          "level": 150,
+          "first_close": "2013-12-31",
+          "close_price": 150.02,
+          "notes": ""
+        },
+        {
+          "level": 200,
+          "first_close": "2017-02-13",
+          "close_price": 200.97,
+          "notes": ""
+        },
+        {
+          "level": 250,
+          "first_close": "2018-01-26",
+          "close_price": 252.24,
+          "notes": ""
+        },
+        {
+          "level": 300,
+          "first_close": "2020-01-16",
+          "close_price": 302.42,
+          "notes": ""
+        },
+        {
+          "level": 350,
+          "first_close": "2021-01-07",
+          "close_price": 352.92,
+          "notes": ""
+        },
+        {
+          "level": 400,
+          "first_close": "2021-06-28",
+          "close_price": 400.56,
+          "notes": ""
+        },
+        {
+          "level": 450,
+          "first_close": "2021-12-27",
+          "close_price": 450.22,
+          "notes": ""
+        },
+        {
+          "level": 500,
+          "first_close": "2024-03-07",
+          "close_price": 501.02,
+          "notes": ""
+        },
+        {
+          "level": 550,
+          "first_close": "2024-07-16",
+          "close_price": 553.22,
+          "notes": ""
+        },
+        {
+          "level": 600,
+          "first_close": "2025-01-23",
+          "close_price": 601.03,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "symbol": "QQQ",
+      "name": "Invesco QQQ Trust (NASDAQ ETF)",
+      "currency": "USD",
+      "milestones": [
+        {
+          "level": 50,
+          "first_close": "1999-07-09",
+          "close_price": 50.48,
+          "notes": ""
+        },
+        {
+          "level": 100,
+          "first_close": "2015-02-26",
+          "close_price": 100.13,
+          "notes": ""
+        },
+        {
+          "level": 150,
+          "first_close": "2017-12-18",
+          "close_price": 150.36,
+          "notes": ""
+        },
+        {
+          "level": 200,
+          "first_close": "2019-12-16",
+          "close_price": 201.24,
+          "notes": ""
+        },
+        {
+          "level": 250,
+          "first_close": "2020-07-08",
+          "close_price": 251.53,
+          "notes": ""
+        },
+        {
+          "level": 300,
+          "first_close": "2020-12-17",
+          "close_price": 300.88,
+          "notes": ""
+        },
+        {
+          "level": 350,
+          "first_close": "2021-07-07",
+          "close_price": 350.68,
+          "notes": ""
+        },
+        {
+          "level": 400,
+          "first_close": "2023-12-18",
+          "close_price": 401.91,
+          "notes": ""
+        },
+        {
+          "level": 450,
+          "first_close": "2024-05-21",
+          "close_price": 450.85,
+          "notes": ""
+        },
+        {
+          "level": 500,
+          "first_close": "2024-11-06",
+          "close_price": 501.59,
+          "notes": ""
+        },
+        {
+          "level": 550,
+          "first_close": "2025-07-03",
+          "close_price": 554.16,
+          "notes": ""
+        }
+      ]
+    }
+  ]
+}
