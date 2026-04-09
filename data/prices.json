@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-09T20:11:54.921723+00:00",
+  "updated": "2026-04-09T21:08:24.661743+00:00",
   "prices": {
     "DOW": {
       "price": 48185.8,
@@ -17,14 +17,14 @@
       "change_pct": 0.828
     },
     "BTC": {
-      "price": 72050.12,
-      "change": 934.99,
-      "change_pct": 1.3148
+      "price": 72592.09,
+      "change": 1476.97,
+      "change_pct": 2.0769
     },
     "ETH": {
-      "price": 2215.53,
-      "change": 25.36,
-      "change_pct": 1.1577
+      "price": 2218.32,
+      "change": 28.14,
+      "change_pct": 1.2847
     }
   }
 }
