@@ -1,30 +1,30 @@
 {
-  "updated": "2026-04-09T14:58:39.004179+00:00",
+  "updated": "2026-04-09T16:21:32.644965+00:00",
   "prices": {
     "DOW": {
-      "price": 47789.09,
-      "change": -125.64,
-      "change_pct": -0.2622
+      "price": 48168.93,
+      "change": 254.2,
+      "change_pct": 0.5305
     },
     "SP": {
-      "price": 6775.67,
-      "change": -7.81,
-      "change_pct": -0.1151
+      "price": 6823.55,
+      "change": 40.07,
+      "change_pct": 0.5907
     },
     "NASDAQ": {
-      "price": 22611.7,
-      "change": -23.29,
-      "change_pct": -0.1029
+      "price": 22800.03,
+      "change": 165.04,
+      "change_pct": 0.7291
     },
     "BTC": {
-      "price": 71152.07,
-      "change": 36.95,
-      "change_pct": 0.052
+      "price": 72307.07,
+      "change": 1191.95,
+      "change_pct": 1.6761
     },
     "ETH": {
-      "price": 2180.17,
-      "change": -10.01,
-      "change_pct": -0.457
+      "price": 2218.14,
+      "change": 27.96,
+      "change_pct": 1.2768
     }
   }
 }
