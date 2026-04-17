@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milestone History — Capital Market Event</title>
-    <meta name="description" content="The first time the Dow crossed 1,000. 10,000. 40,000. A complete record of every round-number milestone in market history.">
+    <title>Market Milestone History — Capital Market Event</title>
+    <meta name="description" content="Every time a major index crossed a round number — the date, the price, the context. Dow back to 1928. Bitcoin back to $1.">
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="assets/history.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
 </head>
 <body>
 
@@ -21,53 +24,42 @@
             </a>
             <nav class="nav">
                 <a href="/#shop">Shop</a>
-                <a href="/history.html" style="color: var(--color-accent)">History</a>
-                <a href="/#milestones">On Deck</a>
+                <a href="/history.html" style="color:var(--color-accent)">History</a>
+                <a href="/about.html">About</a>
             </nav>
         </div>
     </header>
 
-    <main class="history-main">
+    <main style="padding-top:var(--header-height);">
 
         <section class="history-hero">
             <div class="container">
-                <p class="history-eyebrow">Market Milestone History</p>
-                <h1>The first time the number changed.</h1>
-                <p class="history-sub">Every round-number crossing for the Dow, S&P 500, NASDAQ, Bitcoin, and major ETFs — pulled from the actual historical record.</p>
+                <p class="history-eyebrow">Market History</p>
+                <h1>Every number worth marking.</h1>
+                <p class="history-sub">The first time each index crossed each threshold — the date, the closing value, and what was happening. Dow back to 1928. Bitcoin back to $1.</p>
             </div>
         </section>
 
-        <!-- Index selector tabs -->
-        <section class="history-nav-section">
+        <!-- Approaching milestones leaderboard -->
+        <section class="leaderboard-section">
             <div class="container">
-                <div class="history-tabs" id="history-tabs">
-                    <!-- populated by JS -->
+                <h2>Approaching</h2>
+                <p class="section-sub">Closest to their next round number right now.</p>
+                <div class="leaderboard-grid" id="leaderboard-grid">
+                    <p class="history-loading">Loading…</p>
                 </div>
             </div>
         </section>
 
-        <!-- Timeline -->
-        <section class="history-content">
+        <!-- Asset selector + milestone table -->
+        <section class="milestones-browser">
             <div class="container">
-                <div id="history-loading" class="history-loading">
-                    <span>Loading historical data…</span>
+                <div class="asset-tabs" id="asset-tabs">
+                    <!-- injected by JS -->
                 </div>
-                <div id="history-table-wrap" style="display:none;">
-                    <table class="history-table" id="history-table">
-                        <thead>
-                            <tr>
-                                <th>Milestone</th>
-                                <th>First Crossed</th>
-                                <th>Closing Price</th>
-                                <th>Context</th>
-                            </tr>
-                        </thead>
-                        <tbody id="history-tbody"></tbody>
-                    </table>
+                <div class="milestone-panel" id="milestone-panel">
+                    <!-- chart + table injected by JS -->
                 </div>
-                <p id="history-empty" class="history-empty" style="display:none;">
-                    No data yet for this index. Run <code>python automation/historical_scanner.py</code> to generate it.
-                </p>
             </div>
         </section>
 
@@ -81,9 +73,9 @@
                     <span class="footer-brand-name">Capital Market Event</span>
                 </div>
                 <div class="footer-links">
-                    <a href="https://www.zazzle.com/store/capital_market_event" target="_blank" rel="noopener">Store</a>
                     <a href="/#shop">Shop</a>
                     <a href="/history.html">History</a>
+                    <a href="/about.html">About</a>
                 </div>
             </div>
             <div class="footer-bottom">
