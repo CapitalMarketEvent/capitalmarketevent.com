@@ -11,11 +11,34 @@ from pathlib import Path
 import yfinance as yf
 
 SYMBOLS = {
+    # Primary indexes
     "DOW":    "^DJI",
     "SP":     "^GSPC",
     "NASDAQ": "^IXIC",
+    "RUT":    "^RUT",
+    # Index ETFs
+    "SPY":    "SPY",
+    "QQQ":    "QQQ",
+    "IWM":    "IWM",
+    "DIA":    "DIA",
+    "VOO":    "VOO",
+    # Index futures (continuous contracts — recent history only)
+    "YM":     "YM=F",
+    "ES":     "ES=F",
+    "NQ":     "NQ=F",
+    "RTY":    "RTY=F",
+    # Commodities
+    "GOLD":   "GC=F",
+    "SILVER": "SI=F",
+    # Precious metal ETFs
+    "GLD":    "GLD",
+    "SLV":    "SLV",
+    # Crypto
     "BTC":    "BTC-USD",
     "ETH":    "ETH-USD",
+    # Crypto spot ETFs
+    "IBIT":   "IBIT",
+    "ETHA":   "ETHA",
 }
 
 def fetch_quote(yahoo_symbol: str) -> dict | None:

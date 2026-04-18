@@ -1,11 +1,14 @@
 /**
  * Capital Market Event - Market Data
  *
- * Prices: read from /data/prices.json, updated every 30min by GitHub Actions.
+ * Prices: Finnhub direct fetch (live, free API key required) with fallback
+ * to /data/prices.json (updated every 30min by GitHub Actions).
+ * Set FINNHUB_KEY below once you have a key from finnhub.io (free account).
  * Trending: StockTwits (no auth, CORS-safe) + Tradestie WSB (no auth).
- *
- * No API keys. No CORS hacks. No broken calls.
  */
+
+// Set your Finnhub API key here (free at finnhub.io — exposing a free key is acceptable risk)
+const FINNHUB_KEY = '';  // e.g. 'abc123xyz'
 
 // ─── Milestones tracked in "On Deck" section ─────────────────────────────────
 const MILESTONES = {
@@ -27,9 +30,62 @@ function fmt(num, decimals = 0) {
 function signClass(val) { return val >= 0 ? 'positive' : 'negative'; }
 function sign(val)      { return val >= 0 ? '+' : ''; }
 
-// ─── Load prices from static JSON ────────────────────────────────────────────
+// ─── Finnhub symbols ─────────────────────────────────────────────────────────
+// ETFs and crypto work on Finnhub free tier.
+// Futures (CME:YM1! etc.) and precious metal spot (OANDA:XAU_USD) may need premium —
+// those assets fall back to /data/prices.json from GitHub Actions.
+
+const FINNHUB_SYMBOLS = {
+    // Primary indexes
+    DOW:    '^DJI',
+    SP:     '^GSPC',
+    NASDAQ: '^IXIC',
+    RUT:    '^RUT',
+    // Index ETFs
+    SPY:    'SPY',
+    QQQ:    'QQQ',
+    IWM:    'IWM',
+    DIA:    'DIA',
+    VOO:    'VOO',
+    // Precious metal ETFs (proxy for gold/silver spot)
+    GLD:    'GLD',
+    SLV:    'SLV',
+    // Crypto
+    BTC:    'BINANCE:BTCUSDT',
+    ETH:    'BINANCE:ETHUSDT',
+    // Crypto spot ETFs
+    IBIT:   'IBIT',
+    ETHA:   'ETHA',
+};
+
+// ─── Fetch live prices from Finnhub ──────────────────────────────────────────
+
+async function fetchFinnhub(key) {
+    const results = {};
+    await Promise.all(Object.entries(FINNHUB_SYMBOLS).map(async ([name, symbol]) => {
+        try {
+            const url = `https://finnhub.io/api/v1/quote?symbol=${encodeURIComponent(symbol)}&token=${key}`;
+            const res = await fetch(url);
+            if (!res.ok) return;
+            const q = await res.json();
+            if (!q.c) return;  // c = current price; 0 means no data
+            results[name] = {
+                price:      q.c,
+                change:     q.d,       // absolute change
+                change_pct: q.dp,      // percent change
+            };
+        } catch (_) { /* skip on error */ }
+    }));
+    return results;
+}
+
+// ─── Load prices: Finnhub live → fallback to static JSON ─────────────────────
 
 async function loadPrices() {
+    if (FINNHUB_KEY) {
+        const live = await fetchFinnhub(FINNHUB_KEY);
+        if (Object.keys(live).length > 0) return live;
+    }
     try {
         // Cache-bust so browsers don't serve stale data after GitHub Actions updates
         const res = await fetch(`/data/prices.json?t=${Math.floor(Date.now() / 300_000)}`);
@@ -48,8 +104,12 @@ const TICKER_DISPLAY = [
     { key: 'DOW',    label: 'DOW',    prefix: '' },
     { key: 'SP',     label: 'S&P',    prefix: '' },
     { key: 'NASDAQ', label: 'NASDAQ', prefix: '' },
+    { key: 'RUT',    label: 'RUT',    prefix: '' },
+    { key: 'GLD',    label: 'GOLD',   prefix: '$' },
+    { key: 'SLV',    label: 'SILVER', prefix: '$' },
     { key: 'BTC',    label: 'BTC',    prefix: '$' },
     { key: 'ETH',    label: 'ETH',    prefix: '$' },
+    { key: 'IBIT',   label: 'IBIT',   prefix: '$' },
 ];
 
 function renderTickerBar(prices) {
@@ -77,7 +137,7 @@ const HERO_DISPLAY = [
     { key: 'DOW',    label: 'DOW',    prefix: '' },
     { key: 'SP',     label: 'S&P',    prefix: '' },
     { key: 'NASDAQ', label: 'NASDAQ', prefix: '' },
-    { key: 'BTC',    label: 'BTC',    prefix: '$' },
+    { key: 'RUT',    label: 'RUT',    prefix: '' },
 ];
 
 function renderHeroStats(prices) {
