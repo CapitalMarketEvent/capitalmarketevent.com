@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-08T20:33:18.531906+00:00",
+  "updated": "2026-05-09T14:41:36.571979+00:00",
   "prices": {
     "DOW": {
       "price": 49609.16,
@@ -13,7 +13,7 @@
     },
     "NASDAQ": {
       "price": 26247.08,
-      "change": 440.88,
+      "change": 440.89,
       "change_pct": 1.7084
     },
     "RUT": {
@@ -47,34 +47,34 @@
       "change_pct": 0.8275
     },
     "YM": {
-      "price": 49699.0,
-      "change": -68.0,
-      "change_pct": -0.1366
+      "price": 49691.0,
+      "change": -76.0,
+      "change_pct": -0.1527
     },
     "ES": {
-      "price": 7419.75,
-      "change": 41.5,
-      "change_pct": 0.5625
+      "price": 7419.0,
+      "change": 40.75,
+      "change_pct": 0.5523
     },
     "NQ": {
-      "price": 29344.75,
-      "change": 569.5,
-      "change_pct": 1.9791
+      "price": 29332.5,
+      "change": 557.25,
+      "change_pct": 1.9366
     },
     "RTY": {
-      "price": 2867.3,
-      "change": 16.5,
-      "change_pct": 0.5788
+      "price": 2867.6,
+      "change": 16.8,
+      "change_pct": 0.5893
     },
     "GOLD": {
-      "price": 4725.9,
-      "change": -3.1,
-      "change_pct": -0.0656
+      "price": 4720.4,
+      "change": -8.6,
+      "change_pct": -0.1819
     },
     "SILVER": {
-      "price": 80.85,
-      "change": 0.43,
-      "change_pct": 0.5409
+      "price": 80.39,
+      "change": -0.02,
+      "change_pct": -0.0249
     },
     "GLD": {
       "price": 433.77,
@@ -87,14 +87,14 @@
       "change_pct": 1.8604
     },
     "BTC": {
-      "price": 80228.74,
-      "change": 232.46,
-      "change_pct": 0.2906
+      "price": 80271.94,
+      "change": 83.12,
+      "change_pct": 0.1037
     },
     "ETH": {
-      "price": 2310.89,
-      "change": 20.3,
-      "change_pct": 0.8862
+      "price": 2305.34,
+      "change": -1.9,
+      "change_pct": -0.0823
     },
     "IBIT": {
       "price": 45.45,
