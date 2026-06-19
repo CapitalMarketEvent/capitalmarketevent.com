@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19T20:13:36.897417+00:00",
+  "updated": "2026-06-19T21:42:52.011389+00:00",
   "prices": {
     "DOW": {
       "price": 51564.7,
@@ -13,13 +13,13 @@
     },
     "NASDAQ": {
       "price": 26517.93,
-      "change": 496.28,
+      "change": 496.27,
       "change_pct": 1.9072
     },
     "RUT": {
-      "price": 2979.76,
-      "change": 61.78,
-      "change_pct": 2.1173
+      "price": 2979.77,
+      "change": 61.79,
+      "change_pct": 2.1175
     },
     "SPY": {
       "price": 746.74,
@@ -87,14 +87,14 @@
       "change_pct": -3.6743
     },
     "BTC": {
-      "price": 63016.11,
-      "change": 137.1,
-      "change_pct": 0.218
+      "price": 63070.42,
+      "change": 191.41,
+      "change_pct": 0.3044
     },
     "ETH": {
-      "price": 1701.63,
-      "change": -7.33,
-      "change_pct": -0.4289
+      "price": 1702.18,
+      "change": -6.78,
+      "change_pct": -0.3967
     },
     "IBIT": {
       "price": 35.62,
