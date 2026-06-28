@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-21T09:43:13.982414+00:00",
+  "generated": "2026-06-28T08:46:19.762791+00:00",
   "series": [
     {
       "symbol": "^DJI",
@@ -968,67 +968,67 @@
         {
           "level": 50,
           "first_close": "1999-07-09",
-          "close_price": 50.48,
+          "close_price": 50.43,
           "notes": ""
         },
         {
           "level": 100,
           "first_close": "2015-02-26",
-          "close_price": 100.13,
+          "close_price": 100.02,
           "notes": ""
         },
         {
           "level": 150,
           "first_close": "2017-12-18",
-          "close_price": 150.36,
+          "close_price": 150.2,
           "notes": ""
         },
         {
           "level": 200,
           "first_close": "2019-12-16",
-          "close_price": 201.24,
+          "close_price": 201.02,
           "notes": ""
         },
         {
           "level": 250,
           "first_close": "2020-07-08",
-          "close_price": 251.53,
+          "close_price": 251.25,
           "notes": ""
         },
         {
           "level": 300,
           "first_close": "2020-12-17",
-          "close_price": 300.88,
+          "close_price": 300.55,
           "notes": ""
         },
         {
           "level": 350,
           "first_close": "2021-07-07",
-          "close_price": 350.68,
+          "close_price": 350.3,
           "notes": ""
         },
         {
           "level": 400,
           "first_close": "2023-12-18",
-          "close_price": 401.91,
+          "close_price": 401.47,
           "notes": ""
         },
         {
           "level": 450,
           "first_close": "2024-05-21",
-          "close_price": 450.85,
+          "close_price": 450.35,
           "notes": ""
         },
         {
           "level": 500,
           "first_close": "2024-11-06",
-          "close_price": 501.59,
+          "close_price": 501.04,
           "notes": ""
         },
         {
           "level": 550,
           "first_close": "2025-07-03",
-          "close_price": 554.16,
+          "close_price": 553.55,
           "notes": ""
         }
       ]
