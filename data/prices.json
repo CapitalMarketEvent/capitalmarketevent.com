@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-04T14:56:53.509834+00:00",
+  "updated": "2026-07-05T15:04:02.052603+00:00",
   "prices": {
     "DOW": {
       "price": 52900.07,
@@ -87,14 +87,14 @@
       "change_pct": 2.9951
     },
     "BTC": {
-      "price": 62610.62,
-      "change": 56.48,
-      "change_pct": 0.0903
+      "price": 62819.67,
+      "change": -264.22,
+      "change_pct": -0.4188
     },
     "ETH": {
-      "price": 1769.23,
-      "change": 12.12,
-      "change_pct": 0.6898
+      "price": 1773.79,
+      "change": -5.28,
+      "change_pct": -0.2968
     },
     "IBIT": {
       "price": 34.87,
