@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-17T20:21:56.082123+00:00",
+  "updated": "2026-08-17T20:52:52.821301+00:00",
   "prices": {
     "DOW": {
       "price": 53459.78,
@@ -32,14 +32,14 @@
       "change_pct": -0.1341
     },
     "IWM": {
-      "price": 304.04,
-      "change": -0.86,
-      "change_pct": -0.2821
+      "price": 304.06,
+      "change": -0.84,
+      "change_pct": -0.2755
     },
     "DIA": {
-      "price": 534.22,
-      "change": -2.28,
-      "change_pct": -0.425
+      "price": 534.19,
+      "change": -2.31,
+      "change_pct": -0.4306
     },
     "VOO": {
       "price": 710.27,
@@ -47,34 +47,34 @@
       "change_pct": -0.4806
     },
     "YM": {
-      "price": 53515.0,
-      "change": -228.0,
-      "change_pct": -0.4242
+      "price": 53516.0,
+      "change": -227.0,
+      "change_pct": -0.4224
     },
     "ES": {
-      "price": 7767.5,
-      "change": -44.75,
-      "change_pct": -0.5728
+      "price": 7765.5,
+      "change": -46.75,
+      "change_pct": -0.5984
     },
     "NQ": {
-      "price": 30084.0,
-      "change": -161.75,
-      "change_pct": -0.5348
+      "price": 30068.5,
+      "change": -177.25,
+      "change_pct": -0.586
     },
     "RTY": {
-      "price": 3064.0,
-      "change": -10.4,
-      "change_pct": -0.3383
+      "price": 3064.5,
+      "change": -9.9,
+      "change_pct": -0.322
     },
     "GOLD": {
-      "price": 4473.4,
-      "change": 19.7,
-      "change_pct": 0.4423
+      "price": 4472.2,
+      "change": 18.5,
+      "change_pct": 0.4154
     },
     "SILVER": {
-      "price": 65.97,
-      "change": 0.28,
-      "change_pct": 0.4262
+      "price": 65.9,
+      "change": 0.21,
+      "change_pct": 0.3121
     },
     "GLD": {
       "price": 405.49,
@@ -87,14 +87,14 @@
       "change_pct": 1.5773
     },
     "BTC": {
-      "price": 64282.57,
-      "change": 1445.91,
-      "change_pct": 2.3011
+      "price": 64304.23,
+      "change": 1467.57,
+      "change_pct": 2.3355
     },
     "ETH": {
-      "price": 1904.84,
-      "change": 30.71,
-      "change_pct": 1.6386
+      "price": 1904.46,
+      "change": 30.33,
+      "change_pct": 1.6183
     },
     "IBIT": {
       "price": 36.42,
