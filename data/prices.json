@@ -1,110 +1,110 @@
 {
-  "updated": "2026-08-25T16:32:50.707964+00:00",
+  "updated": "2026-08-25T17:28:04.294326+00:00",
   "prices": {
     "DOW": {
-      "price": 53495.25,
-      "change": 76.06,
-      "change_pct": 0.1424
+      "price": 53474.26,
+      "change": 55.07,
+      "change_pct": 0.1031
     },
     "SP": {
-      "price": 7676.36,
-      "change": 23.54,
-      "change_pct": 0.3076
+      "price": 7665.7,
+      "change": 12.88,
+      "change_pct": 0.1683
     },
     "NASDAQ": {
-      "price": 26145.04,
-      "change": 164.85,
-      "change_pct": 0.6345
+      "price": 26100.47,
+      "change": 120.28,
+      "change_pct": 0.463
     },
     "RUT": {
-      "price": 3004.25,
-      "change": 9.05,
-      "change_pct": 0.3023
+      "price": 3003.79,
+      "change": 8.6,
+      "change_pct": 0.2871
     },
     "SPY": {
-      "price": 765.8,
-      "change": 2.16,
-      "change_pct": 0.2822
+      "price": 764.69,
+      "change": 1.04,
+      "change_pct": 0.1362
     },
     "QQQ": {
-      "price": 711.2,
-      "change": 4.94,
-      "change_pct": 0.6996
+      "price": 709.33,
+      "change": 3.07,
+      "change_pct": 0.4341
     },
     "IWM": {
-      "price": 298.79,
-      "change": 0.85,
-      "change_pct": 0.2853
+      "price": 298.58,
+      "change": 0.64,
+      "change_pct": 0.2165
     },
     "DIA": {
-      "price": 534.53,
-      "change": 0.86,
-      "change_pct": 0.1621
+      "price": 534.28,
+      "change": 0.61,
+      "change_pct": 0.1143
     },
     "VOO": {
-      "price": 703.95,
-      "change": 2.02,
-      "change_pct": 0.2878
+      "price": 702.87,
+      "change": 0.94,
+      "change_pct": 0.1338
     },
     "YM": {
-      "price": 53542.0,
-      "change": 58.0,
-      "change_pct": 0.1084
+      "price": 53562.0,
+      "change": 78.0,
+      "change_pct": 0.1458
     },
     "ES": {
-      "price": 7688.75,
-      "change": 14.25,
-      "change_pct": 0.1857
+      "price": 7686.0,
+      "change": 11.5,
+      "change_pct": 0.1498
     },
     "NQ": {
-      "price": 29288.75,
-      "change": 131.0,
-      "change_pct": 0.4493
+      "price": 29244.5,
+      "change": 86.75,
+      "change_pct": 0.2975
     },
     "RTY": {
-      "price": 3008.4,
-      "change": 4.0,
-      "change_pct": 0.1331
+      "price": 3008.3,
+      "change": 3.9,
+      "change_pct": 0.1298
     },
     "GOLD": {
-      "price": 4695.6,
-      "change": 7.3,
-      "change_pct": 0.1557
+      "price": 4697.9,
+      "change": 9.6,
+      "change_pct": 0.2048
     },
     "SILVER": {
-      "price": 68.54,
-      "change": 0.61,
-      "change_pct": 0.898
+      "price": 68.76,
+      "change": 0.83,
+      "change_pct": 1.2218
     },
     "GLD": {
-      "price": 425.68,
-      "change": -3.37,
-      "change_pct": -0.7846
+      "price": 425.3,
+      "change": -3.74,
+      "change_pct": -0.8726
     },
     "SLV": {
-      "price": 62.06,
-      "change": -0.88,
-      "change_pct": -1.4004
+      "price": 62.1,
+      "change": -0.84,
+      "change_pct": -1.3412
     },
     "BTC": {
-      "price": 79308.75,
-      "change": 321.32,
-      "change_pct": 0.4068
+      "price": 78804.01,
+      "change": -183.42,
+      "change_pct": -0.2322
     },
     "ETH": {
-      "price": 2477.01,
-      "change": -5.69,
-      "change_pct": -0.2292
+      "price": 2459.16,
+      "change": -23.54,
+      "change_pct": -0.9482
     },
     "IBIT": {
-      "price": 44.94,
-      "change": 0.2,
-      "change_pct": 0.4359
+      "price": 44.63,
+      "change": -0.11,
+      "change_pct": -0.2459
     },
     "ETHA": {
-      "price": 18.69,
-      "change": -0.03,
-      "change_pct": -0.149
+      "price": 18.56,
+      "change": -0.16,
+      "change_pct": -0.8695
     }
   }
 }
