@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-11T21:50:56.413969+00:00",
+  "updated": "2026-09-12T16:35:28.141546+00:00",
   "prices": {
     "DOW": {
       "price": 52573.29,
@@ -14,12 +14,12 @@
     "NASDAQ": {
       "price": 26333.04,
       "change": 251.31,
-      "change_pct": 0.9635
+      "change_pct": 0.9636
     },
     "RUT": {
       "price": 2903.94,
-      "change": 13.0,
-      "change_pct": 0.4496
+      "change": 12.99,
+      "change_pct": 0.4494
     },
     "SPY": {
       "price": 764.29,
@@ -47,34 +47,34 @@
       "change_pct": 0.8889
     },
     "YM": {
-      "price": 52576.0,
-      "change": 397.0,
-      "change_pct": 0.7608
+      "price": 52585.0,
+      "change": 406.0,
+      "change_pct": 0.7781
     },
     "ES": {
-      "price": 7660.75,
-      "change": 58.0,
-      "change_pct": 0.7629
+      "price": 7659.5,
+      "change": 56.75,
+      "change_pct": 0.7464
     },
     "NQ": {
-      "price": 29391.75,
-      "change": 321.75,
-      "change_pct": 1.1068
+      "price": 29387.0,
+      "change": 317.0,
+      "change_pct": 1.0905
     },
     "RTY": {
-      "price": 2904.7,
-      "change": 9.7,
-      "change_pct": 0.3351
+      "price": 2904.5,
+      "change": 9.5,
+      "change_pct": 0.3282
     },
     "GOLD": {
-      "price": 4390.0,
-      "change": 45.0,
-      "change_pct": 1.0357
+      "price": 4366.2,
+      "change": 21.2,
+      "change_pct": 0.4879
     },
     "SILVER": {
-      "price": 65.02,
-      "change": 1.45,
-      "change_pct": 2.2809
+      "price": 64.55,
+      "change": 0.98,
+      "change_pct": 1.5479
     },
     "GLD": {
       "price": 398.77,
@@ -87,14 +87,14 @@
       "change_pct": 1.4134
     },
     "BTC": {
-      "price": 77229.75,
-      "change": 697.8,
-      "change_pct": 0.9118
+      "price": 77373.35,
+      "change": 164.71,
+      "change_pct": 0.2133
     },
     "ETH": {
-      "price": 2528.4,
-      "change": 91.19,
-      "change_pct": 3.7416
+      "price": 2532.69,
+      "change": 16.59,
+      "change_pct": 0.6593
     },
     "IBIT": {
       "price": 43.77,
