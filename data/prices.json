@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T16:35:28.141546+00:00",
+  "updated": "2026-09-13T17:06:53.622027+00:00",
   "prices": {
     "DOW": {
       "price": 52573.29,
@@ -47,9 +47,9 @@
       "change_pct": 0.8889
     },
     "YM": {
-      "price": 52585.0,
-      "change": 406.0,
-      "change_pct": 0.7781
+      "price": 52576.0,
+      "change": 397.0,
+      "change_pct": 0.7608
     },
     "ES": {
       "price": 7659.5,
@@ -67,14 +67,14 @@
       "change_pct": 0.3282
     },
     "GOLD": {
-      "price": 4366.2,
-      "change": 21.2,
-      "change_pct": 0.4879
+      "price": 4408.9,
+      "change": 63.9,
+      "change_pct": 1.4707
     },
     "SILVER": {
-      "price": 64.55,
-      "change": 0.98,
-      "change_pct": 1.5479
+      "price": 65.19,
+      "change": 1.62,
+      "change_pct": 2.5452
     },
     "GLD": {
       "price": 398.77,
@@ -87,14 +87,14 @@
       "change_pct": 1.4134
     },
     "BTC": {
-      "price": 77373.35,
-      "change": 164.71,
-      "change_pct": 0.2133
+      "price": 77313.04,
+      "change": 46.62,
+      "change_pct": 0.0603
     },
     "ETH": {
-      "price": 2532.69,
-      "change": 16.59,
-      "change_pct": 0.6593
+      "price": 2506.56,
+      "change": -18.91,
+      "change_pct": -0.7488
     },
     "IBIT": {
       "price": 43.77,
