@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T10:31:54.614460+00:00",
+  "generated": "2026-09-27T11:17:19.276913+00:00",
   "series": [
     {
       "symbol": "^DJI",
@@ -968,67 +968,67 @@
         {
           "level": 50,
           "first_close": "1999-07-09",
-          "close_price": 50.43,
+          "close_price": 50.37,
           "notes": ""
         },
         {
           "level": 100,
-          "first_close": "2015-02-26",
-          "close_price": 100.02,
+          "first_close": "2015-03-02",
+          "close_price": 100.37,
           "notes": ""
         },
         {
           "level": 150,
           "first_close": "2017-12-18",
-          "close_price": 150.2,
+          "close_price": 150.04,
           "notes": ""
         },
         {
           "level": 200,
           "first_close": "2019-12-16",
-          "close_price": 201.02,
+          "close_price": 200.81,
           "notes": ""
         },
         {
           "level": 250,
           "first_close": "2020-07-08",
-          "close_price": 251.25,
+          "close_price": 250.99,
           "notes": ""
         },
         {
           "level": 300,
           "first_close": "2020-12-17",
-          "close_price": 300.55,
+          "close_price": 300.23,
           "notes": ""
         },
         {
           "level": 350,
-          "first_close": "2021-07-07",
-          "close_price": 350.3,
+          "first_close": "2021-07-12",
+          "close_price": 351.36,
           "notes": ""
         },
         {
           "level": 400,
           "first_close": "2023-12-18",
-          "close_price": 401.47,
+          "close_price": 401.06,
           "notes": ""
         },
         {
           "level": 450,
-          "first_close": "2024-05-21",
-          "close_price": 450.35,
+          "first_close": "2024-05-24",
+          "close_price": 452.01,
           "notes": ""
         },
         {
           "level": 500,
           "first_close": "2024-11-06",
-          "close_price": 501.04,
+          "close_price": 500.51,
           "notes": ""
         },
         {
           "level": 550,
           "first_close": "2025-07-03",
-          "close_price": 553.55,
+          "close_price": 552.98,
           "notes": ""
         }
       ]
