@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17T16:43:47.162230+00:00",
+  "updated": "2026-10-18T16:59:38.360350+00:00",
   "prices": {
     "DOW": {
       "price": 52002.41,
@@ -72,9 +72,9 @@
       "change_pct": -0.5542
     },
     "SILVER": {
-      "price": 56.99,
-      "change": -1.07,
-      "change_pct": -1.8428
+      "price": 57.31,
+      "change": -0.76,
+      "change_pct": -1.3089
     },
     "GLD": {
       "price": 382.01,
@@ -87,14 +87,14 @@
       "change_pct": -0.0
     },
     "BTC": {
-      "price": 81192.81,
-      "change": -307.23,
-      "change_pct": -0.377
+      "price": 80971.55,
+      "change": -409.85,
+      "change_pct": -0.5036
     },
     "ETH": {
-      "price": 2404.03,
-      "change": -15.89,
-      "change_pct": -0.6566
+      "price": 2362.84,
+      "change": -36.98,
+      "change_pct": -1.5409
     },
     "IBIT": {
       "price": 46.15,
